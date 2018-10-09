@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+spring:
+  profiles: dev
+  application:
+    name: shopconfig-config-client
+eureka:
+  client:  
+    service-url:
+      defaultZone: http://edmin:shopjava@eureka-dev.com:7001/eureka
+---
+spring:
+  profiles: beta
+  application:
+    name: shopconfig-config-client
+eureka:
+  client:  
+    service-url:
+      defaultZone: http://edmin:shopjava@eureka-beta.com:7001/eureka
